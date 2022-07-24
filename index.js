@@ -11,9 +11,11 @@ function TEST(array) {
                 left:${item.left || '0'};
                 width:${item.width || '100%'};
                 height:${item.height || '100%'};"
+                data-original="imgs/png/${item.name}.jpg"
                 src="imgs/png/${item.name}.jpg">`
         }
     }
+    $("img").lazyload();
     $('.bar').html(bar_html)
     $('.bg').html(bg_html)
 }
@@ -28,7 +30,9 @@ $(function () {
     for (let i = 2; i < 35; i++) {
         position.push({ name: '0717_' + i, active: false },)
     }
-    TEST(position)
+    setTimeout(function(){
+        TEST(position)
+    },3000)
 
     var v1 = document.getElementById('video1')
     var v2 = document.getElementById('video2')
