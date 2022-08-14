@@ -10,9 +10,11 @@
     text-align: center;
 }
 .main video {
-    width: auto;
+    width: 100vw;
+    object-fit:fill;
+    height: 100vh;
     /* min-height: 100%; */
-    height: 100%;
+    /* height: 100%; */
 }
 
 .center-href{
@@ -25,6 +27,7 @@
     left: 50%;
     transform: translate(-50%,-50%);
     cursor: pointer;
+    z-index: 2;
 }
 
 .a1 {
@@ -47,10 +50,11 @@
     right: 0;
     z-index: 1;
 }
+
 .hide{
     display: none;
 }
-.page_t5.hide{
+.page_t6.hide{
     display: none;
 }
 
@@ -58,15 +62,15 @@
     background: #000;
 }
 
-.page_t5{
+.page_t6{
     display: flex;
     justify-content: space-between;
 }
-.page_t5 .bg img {
+.page_t6 .bg img {
     width: 100%;
     height: auto;
 }
-.page_t5 .bg {
+.page_t6 .bg {
     position: relative;
     flex: 1;
 }
@@ -95,4 +99,143 @@
     border-color: red;
     /* box-shadow: 0px 0px 0px 1px #a5a5a5; */
     transition: all .3s;
+}
+
+
+/* home */
+.home img {
+    width: 60%;
+    position: absolute;
+    z-index: 1;  
+}
+.home .center{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.home .n1,.home .n2,.home .n3{
+  top: 35%;
+}
+.home .n2{
+  top: 15%;
+    left: 10%;
+}
+
+.home .n3{
+     top: 15%;
+    right: 10%;
+}
+.page_d1 .next {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    cursor: pointer;
+    top: 60%;
+    left: 42%;
+    z-index: 1;
+}
+
+
+
+.page_d2 .next{
+    position: absolute;
+    width: 5%;
+    height: auto;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.page_d2 .n1{
+    top: 27%;
+    left: 16%;
+}
+.page_d2 .n2{
+    top: 13%;
+    left: 48%;
+}
+.page_d2 .n3{
+    top: 27%;
+    right: 14%;
+}
+
+.page_d3 .center-href{
+    width: 17%;
+    height: 100px;
+    left: 63%;
+    top: 67%;
+}
+
+/* 天堂 */
+.page_t1 img {
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height: auto;
+    max-height: 100vh;
+    cursor: pointer;
+}
+.page_t2 .center-href:hover .n1,
+.page_t3 .center-href:hover .n1,
+.page_t4 .center-href:hover .n1,
+.page_t5 .center-href:hover .n1{
+    display: block;
+}
+.page_t2 .n1,
+.page_t3 .n1,
+.page_t4 .n1,
+.page_t5 .n1
+{
+    display: none;
+    width: 30%;
+    position: absolute;
+    z-index: 1;
+    top: 23%;
+    left: 36%;
+}
+.page_t2 .n1:hover,
+.page_t3 .n1:hover,
+.page_t4 .n1:hover,
+.page_t5 .n1:hover,
+ .next-t:hover,
+ .choose:hover{
+    transition: .3s all;
+    transform: scale(1.1);
+}
+.next-t {
+    position: absolute;
+    right: 32%;
+    bottom: 13%;
+    font-size: 30px;
+    cursor: pointer;
+    border: 2px solid white;
+    color: #6b9fff;
+    padding: 3px 10px;
+    font-weight: 500;
+}
+.choose {
+    position: absolute;
+    bottom: 13%;
+    left: 33%;
+    font-size: 30px;
+    cursor: pointer;
+    border: 2px solid white;
+    font-weight: 500;
+    color: #6b9fff;
+    padding: 3px 10px;
+   
+}
+.page_t6 {
+    position: relative;
+}
+.page_t6 .text {
+    position: absolute;
+    left: 42%;
+    bottom: 10%;
+    font-size: 2em;
+    z-index: 1;
+    color: white;
+    font-weight: 300;
+    font-family: monospace;
 }

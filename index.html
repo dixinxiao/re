@@ -7,62 +7,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aoi</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 </head>
 
 <body>
     <section class="container">
-        <div class="main home">
-            <video src="imgs/v1.mp4" id="video1" autoplay muted loop></video>
+        <div class="main home animate__animated  animate__fadeIn">
+            <video src="v/v1.mp4" id="video1" autoplay muted loop></video>
+            <img src="imgs/0814_3.jpg" class="n1 center">
+            <img src="imgs/0814_2.jpg" class="n2 ">
+            <img src="imgs/0814_1.jpg" class="n3 ">
             <div class="center-href toPage1"></div>
+            
         </div>
 
-        <div class="main page1 hide">
-            <video src="imgs/v2.mp4" id="video2" autoplay loop></video>
+        <div class="main page1 hide  animate__animated  animate__fadeIn">
+            <video src="V/v2.mp4" id="video2" autoplay loop></video>
             <div class="a1 to_d1"></div>
             <div class="a2 to_t1"></div>
         </div>
 
         <!-- 地狱线 start -->
-        <div class="main page_d1 bgb hide">
-            <video src="imgs/d1.mp4" id="video3" autoplay loop></video>
-            <div class="center-href to_d2"></div>
+        <div class="main page_d1 bgb hide animate__animated  animate__fadeIn">
+            <video src="v/v3.mp4" id="video3" autoplay loop></video>
+            <img src="imgs/0814_11.jpg" class="hide to_d2 animate__animated  animate__pulse next">
         </div>
-        <div class="main page_d2 bgb hide">
-            <video src="imgs/d2.mp4" id="video4" autoplay loop></video>
-            <div class="center-href to_d3"></div>
+        <div class="main page_d2 bgb hide  animate__animated  animate__fadeIn">
+            <video src="v/v4.mp4" id="video4" autoplay loop></video>
+            <img src="imgs/0814_17.jpg" class=" n1 to_d3 animate__animated  animate__backInDown next">
+            <img src="imgs/0814_18.jpg" class=" n2 to_d3 animate__animated  animate__backInDown next">
+            <img src="imgs/0814_17.jpg" class=" n3 to_d3 animate__animated  animate__backInDown next">
         </div>
-        <div class="main page_d3 bgb hide">
-            <video src="imgs/d3.mp4" id="video5" autoplay loop></video>
+        <div class="main page_d3 bgb hide  animate__animated  animate__fadeIn">
+            <video src="v/v5.mp4" id="video5" autoplay loop></video>
             <div class="center-href to_d4"></div>
         </div>
-        <div class="main page_d4 bgb hide">
-            <video src="imgs/d4.mp4" id="video6" autoplay loop></video>
-            <div class="center-href to_d5"></div>
-        </div>
-        <div class="main page_d5 bgb hide">
+        <div class="main page_d4 bgb hide  animate__animated  animate__fadeIn">
             <video id="video7" autoplay loop></video>
             <div class="center-href to_home"></div>
         </div>
         <!-- 地狱线 end -->
 
         <!-- 天堂线 start -->
-        <div class="main page_t1 hide">
-            <video src="imgs/t1.mp4" id="video-t1" autoplay loop></video>
-            <div class="center-href to_t2"></div>
+        <div class="main page_t1 hide animate__animated  animate__fadeIn">
+            <video src="imgs/t2.mp4" id="video-t1" autoplay loop></video>
+            <img src="imgs/0814_8.jpg" class="n2 to_t2 animate__animated  animate__backInDown next">
         </div>
-        <div class="main page_t2 hide">
-            <video src="imgs/t2.mp4" id="video-t2" autoplay loop></video>
-            <div class="center-href to_t3"></div>
+        <div class="main page_t2 hide animate__animated  animate__fadeIn">
+            <video src="v/t2.mp4" id="video-t2" autoplay loop></video>
+            <div class="to_t3 next-t">next</div>
+            <div class="choose" data-img="imgs/1.ico">choose</div>
+            <div class="center-href">
+                <img src="imgs/0814_13.jpg" class="n1 animate__animated  animate__fadeIn">
+            </div>
         </div>
-        <div class="main page_t3 hide">
-            <video src="imgs/t3.mp4" id="video-t3" autoplay loop></video>
-            <div class="center-href to_t4"></div>
+        <div class="main page_t3 hide animate__animated  animate__fadeIn">
+            <video src="v/t3.mp4" id="video-t3" autoplay loop></video>
+            <div class="to_t4 next-t">next</div>
+            <div class="choose" data-img="imgs/2.ico">choose</div>
+            <div class="center-href">
+                <img src="imgs/0814_14.jpg" class="n1 animate__animated  animate__fadeIn">
+            </div>
         </div>
-        <div class="main page_t4 hide">
-            <video src="imgs/t4.mp4" id="video-t4" autoplay loop></video>
-            <div class="center-href to_t5"></div>
+        <div class="main page_t4 hide animate__animated  animate__fadeIn">
+            <video src="v/t4.mp4" id="video-t4" autoplay loop></video>
+            <div class="to_t5 next-t">next</div>
+            <div class="choose" data-img="imgs/4.ico">choose</div>
+            <div class="center-href">
+                <img src="imgs/0814_16.jpg" class="n1 animate__animated  animate__fadeIn">
+            </div>
         </div>
-        <div class="main page_t5 hide">
+        <div class="main page_t5 hide animate__animated  animate__fadeIn">
+            <video src="v/t5.mp4" id="video-t5" autoplay loop></video>
+            <div class="to_t6 next-t">next</div>
+            <div class="choose" data-img="imgs/3.ico">choose</div>
+            <div class="center-href">
+                <img src="imgs/0814_15.jpg" class="n1 animate__animated  animate__fadeIn">
+            </div>
+        </div>
+        <div class="main page_t6 hide animate__animated  animate__fadeIn">
+            <div class="text animate__animated  animate__fadeInUpBig">Time to create your own space now!</div>
             <ul class="bar"></ul>
             <div class="bg"></div>
             <!-- <div class="center-href to_home"></div> -->

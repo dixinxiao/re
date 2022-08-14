@@ -53,6 +53,9 @@ $(function () {
         $('.page1').hide()
         $('.page_d1').show()
         v3.play()
+        setTimeout(()=>{
+            $('.page_d1 .next').show()
+        },6000)
     })
     $('.to_d2').on('click', function () {
         v3.pause()
@@ -66,17 +69,17 @@ $(function () {
         $('.page_d3').show()
         v5.play()
     })
+    // $('.to_d4').on('click', function () {
+    //     v5.pause()
+    //     $('.page_d3').hide()
+    //     $('.page_d4').show()
+    //     v6.play()
+    // })
+
     $('.to_d4').on('click', function () {
         v5.pause()
         $('.page_d3').hide()
         $('.page_d4').show()
-        v6.play()
-    })
-
-    $('.to_d5').on('click', function () {
-        v6.pause()
-        $('.page_d4').hide()
-        $('.page_d5').show()
         let date = new Date().getTime()
         if (date % 2 == 0) {
             v7.src = 'imgs/d5.mp4'
@@ -84,8 +87,14 @@ $(function () {
             v7.src = 'imgs/d6.mp4'
         }
         v7.play()
+        setTimeout(()=>{
+            v7.pause()
+            $('.page_d4').hide()
+            $('.home').show()
+            v1.play()
+        },5000)
     })
-    $('.page_d5 .to_home').on('click', function () {
+    $('.page_d4 .to_home').on('click', function () {
         v7.pause()
         $('.page_d5').hide()
         $('.home').show()
@@ -97,6 +106,9 @@ $(function () {
     var vt2 = document.getElementById('video-t2')
     var vt3 = document.getElementById('video-t3')
     var vt4 = document.getElementById('video-t4')
+    var vt5 = document.getElementById('video-t5')
+
+    var chooseCuser;
     $('.to_t1').on('click', function () {
         v2.pause()
         $('.page1').hide()
@@ -124,11 +136,25 @@ $(function () {
         vt4.play()
     })
     $('.to_t5').on('click', function () {
-        // vt4.pause()
+        vt4.pause()
         $('.page_t4').hide()
-        $('.page_t5').css('display','flex')
+        $('.page_t5').show()
+        vt5.play()
+    })
+    $('.to_t6').on('click', function () {
+        // vt4.pause()
+        $('.page_t5').hide()
+        $('.page_t6').css('display','flex')
     })
 
+
+    $('.choose').on('click', function () {
+        chooseCuser = $(this).attr('data-img')
+        console.log(chooseCuser)
+        $('.main').hide()
+        $('.page_t6').css('display','flex')
+        $('.page_t6').css('cursor',`url(${chooseCuser}),auto`)
+    })
 
 
 
@@ -136,6 +162,7 @@ $(function () {
         let index = $(this).attr('data-index')
         position[index]['active'] = !position[index].active
         let data = JSON.parse(JSON.stringify(position))
+        $('.page_t6 .text').hide()
         TEST(data)
     })
 })
