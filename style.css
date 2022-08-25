@@ -34,20 +34,28 @@
     cursor: pointer;
     /* background-color: #00000011; */
     position: absolute;
-    width: 45vw;
-    height: 50vw;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
+    width: 30%;
+    height: auto;
+    bottom: 33vh;
+    left: 12vw;
+    z-index: 2;
 }
 .a2 {
     cursor: pointer;
     /* background-color: #ffc0cb3f; */
     position: absolute;
-    width: 45vw;
-    height: 50vw;
-    bottom: 0;
-    right: 0;
+    width: 30%;
+    height: auto;
+    bottom: 23vh;
+    right: 12vw;
+    z-index: 2;
+}
+.a3{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -35vh;
+    left: 0;
     z-index: 1;
 }
 
@@ -124,6 +132,20 @@
 .home .n3{
      top: 15%;
     right: 10%;
+}
+.page1{
+    position: relative;
+}
+
+.page1 .n1,
+.page1 .n2{
+    position: absolute;
+    /* width: 15%; */
+    height: auto;
+    cursor: pointer;
+    top: 60%;
+    left: 0%;
+    z-index: 1;
 }
 .page_d1 .next {
     position: absolute;
@@ -224,18 +246,48 @@
     font-weight: 500;
     color: #6b9fff;
     padding: 3px 10px;
-   
 }
 .page_t6 {
     position: relative;
 }
 .page_t6 .text {
     position: absolute;
-    left: 42%;
-    bottom: 10%;
+    left: 40%;
+    bottom: 14%;
     font-size: 2em;
     z-index: 1;
     color: white;
     font-weight: 300;
     font-family: monospace;
+    background-image: url(./imgs/0815_1.jpg);
+    background-size: 100% 100%;
+    height: 9vh;
+    width: 36%;
+}
+
+.completed,.reset,.end {
+    position: absolute;
+    cursor: pointer;
+    border: 2px solid #6b9fff;
+    font-weight: 500;
+    color: #6b9fff;
+    padding: 3px 10px;
+    text-align: center;
+}
+
+.completed {
+    left: 40px;
+    bottom: 10vh;
+}
+.reset {
+    top: 50%;
+    left: 40%;
+    border-color: #fff;
+    min-width: 100px;
+}
+.end{
+    top: 50%;
+    right: 40%;
+    border-color: #fff;
+    min-width: 100px;
 }

@@ -26,13 +26,13 @@ $(function () {
         video[0].muted = false
     }, true)
 
-    let position = [{ id: 1, name: '0717_1', active: true},]
+    let position = [{ id: 1, name: '0717_1', active: true },]
     for (let i = 2; i < 35; i++) {
         position.push({ name: '0717_' + i, active: false },)
     }
-    setTimeout(function(){
+    setTimeout(function () {
         TEST(position)
-    },3000)
+    }, 3000)
 
     var v1 = document.getElementById('video1')
     var v2 = document.getElementById('video2')
@@ -53,9 +53,9 @@ $(function () {
         $('.page1').hide()
         $('.page_d1').show()
         v3.play()
-        setTimeout(()=>{
+        setTimeout(() => {
             $('.page_d1 .next').show()
-        },6000)
+        }, 6000)
     })
     $('.to_d2').on('click', function () {
         v3.pause()
@@ -69,30 +69,27 @@ $(function () {
         $('.page_d3').show()
         v5.play()
     })
-    // $('.to_d4').on('click', function () {
-    //     v5.pause()
-    //     $('.page_d3').hide()
-    //     $('.page_d4').show()
-    //     v6.play()
-    // })
 
     $('.to_d4').on('click', function () {
+        let time =9000;
         v5.pause()
         $('.page_d3').hide()
         $('.page_d4').show()
         let date = new Date().getTime()
         if (date % 2 == 0) {
             v7.src = 'imgs/d5.mp4'
+            time = 5500
         } else {
             v7.src = 'imgs/d6.mp4'
+            time = 8500
         }
         v7.play()
-        setTimeout(()=>{
+        setTimeout(() => {
             v7.pause()
-            $('.page_d4').hide()
-            $('.home').show()
+            $('.page_d4').hide(500)
+            $('.home').show(500)
             v1.play()
-        },5000)
+        }, time)
     })
     $('.page_d4 .to_home').on('click', function () {
         v7.pause()
@@ -142,9 +139,14 @@ $(function () {
         vt5.play()
     })
     $('.to_t6').on('click', function () {
-        // vt4.pause()
+        vt5.pause()
         $('.page_t5').hide()
-        $('.page_t6').css('display','flex')
+        if (!chooseCuser) {
+            $('.page_t2').show()
+            vt2.play()
+        }else{
+            $('.page_t6').css('display', 'flex')
+        }
     })
 
 
@@ -152,10 +154,28 @@ $(function () {
         chooseCuser = $(this).attr('data-img')
         console.log(chooseCuser)
         $('.main').hide()
-        $('.page_t6').css('display','flex')
-        $('.page_t6').css('cursor',`url(${chooseCuser}),auto`)
+        $('.page_t6').css('display', 'flex')
+        $('.page_t6').css('cursor', `url(${chooseCuser}),auto`)
     })
 
+    $('.completed').on('click', function () {
+        $('.page_t6 .bar').css('display', 'none')
+        $(this).hide()
+        $('.page_t6 .reset').show()
+        $('.page_t6 .end').show()
+    })
+
+    $('.reset').on('click', function () {
+        $('.page_t6 .bar').css('display', 'block')
+        $(this).hide()
+        $('.page_t6 .end').hide()
+        $('.page_t6 .completed').show()
+    })
+
+    $('.end').on('click', function () {
+        $(this).hide()
+        $('.page_t6 .reset').hide()
+    })
 
 
     $(document).on('click', '.bar li', function (e) {
